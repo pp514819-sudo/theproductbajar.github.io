@@ -1,0 +1,458 @@
+/* ==========================
+   PRODUCT BAJAR V2
+========================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#f4f6fb;
+color:#222;
+}
+
+/* Container */
+
+.container{
+width:90%;
+max-width:1300px;
+margin:auto;
+}
+
+/* Header */
+
+header{
+background:#081b33;
+position:sticky;
+top:0;
+z-index:999;
+box-shadow:0 5px 20px rgba(0,0,0,.15);
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 0;
+flex-wrap:wrap;
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.logo{
+width:70px;
+height:70px;
+border-radius:50%;
+background:#fff;
+padding:5px;
+}
+
+.brand h1{
+font-size:30px;
+color:#ffb300;
+}
+
+.brand p{
+color:#ddd;
+font-size:14px;
+}
+
+.insta-btn{
+background:#ff9800;
+color:white;
+text-decoration:none;
+padding:12px 20px;
+border-radius:10px;
+font-weight:600;
+transition:.3s;
+}
+
+.insta-btn:hover{
+background:#ff6d00;
+}
+
+/* Hero */
+
+.hero{
+background:linear-gradient(135deg,#ff9800,#ffb300);
+padding:70px 20px;
+text-align:center;
+color:white;
+}
+
+.hero h2{
+font-size:42px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:18px;
+margin-bottom:25px;
+}
+
+#search{
+width:100%;
+max-width:550px;
+padding:16px;
+font-size:16px;
+border:none;
+border-radius:12px;
+outline:none;
+}
+
+/* Categories */
+
+.categories{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:12px;
+padding:35px 0;
+}
+
+.categories button{
+border:none;
+background:white;
+padding:12px 22px;
+border-radius:30px;
+cursor:pointer;
+font-weight:600;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+transition:.3s;
+}
+
+.categories button:hover,
+.categories button.active{
+background:#081b33;
+color:white;
+}
+
+/* Loading */
+
+#loading{
+display:none;
+padding:40px;
+font-size:22px;
+text-align:center;
+}
+
+/* Product Grid */
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+padding-bottom:50px;
+}
+
+/* Product Card */
+
+.card{
+background:white;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 8px 25px rgba(0,0,0,.12);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card img{
+width:100%;
+aspect-ratio:1/1;
+object-fit:contain;
+background:white;
+padding:15px;
+}
+
+.card-content{
+padding:18px;
+}
+
+.card-content h3{
+font-size:20px;
+margin-bottom:15px;
+height:55px;
+overflow:hidden;
+}
+
+.category{
+display:inline-block;
+background:#081b33;
+color:white;
+padding:6px 14px;
+border-radius:20px;
+font-size:13px;
+margin-bottom:18px;
+}
+
+.buy-btn{
+display:block;
+width:100%;
+text-align:center;
+background:#ff9800;
+color:white;
+text-decoration:none;
+padding:14px;
+border-radius:10px;
+font-weight:600;
+transition:.3s;
+}
+
+.buy-btn:hover{
+background:#081b33;
+}
+/* ==========================
+   Footer
+========================== */
+
+footer{
+background:#081321;
+color:white;
+text-align:center;
+padding:50px 20px;
+margin-top:40px;
+}
+
+.footer-logo{
+width:90px;
+height:90px;
+border-radius:50%;
+background:white;
+padding:5px;
+margin-bottom:15px;
+}
+
+footer h2{
+margin-bottom:10px;
+font-size:28px;
+}
+
+footer p{
+color:#d6d6d6;
+line-height:1.8;
+margin-top:10px;
+}
+
+.social{
+margin:25px 0;
+}
+
+.social a{
+display:inline-flex;
+justify-content:center;
+align-items:center;
+width:45px;
+height:45px;
+margin:0 8px;
+border-radius:50%;
+background:#ff9800;
+color:white;
+text-decoration:none;
+font-size:20px;
+transition:.3s;
+}
+
+.social a:hover{
+background:white;
+color:#081b33;
+transform:translateY(-5px);
+}
+
+/* ==========================
+   Floating WhatsApp
+========================== */
+
+#whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+width:60px;
+height:60px;
+border-radius:50%;
+background:#25D366;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:30px;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,.25);
+z-index:999;
+transition:.3s;
+}
+
+#whatsapp:hover{
+transform:scale(1.1);
+}
+
+/* ==========================
+   Back To Top
+========================== */
+
+#topBtn{
+position:fixed;
+left:20px;
+bottom:20px;
+width:50px;
+height:50px;
+border:none;
+border-radius:50%;
+background:#081b33;
+color:white;
+font-size:20px;
+cursor:pointer;
+display:none;
+box-shadow:0 5px 15px rgba(0,0,0,.25);
+transition:.3s;
+}
+
+#topBtn:hover{
+background:#ff9800;
+}
+
+/* ==========================
+   Simple Fade Animation
+========================== */
+
+.card{
+animation:fadeUp .5s ease;
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+/* ==========================
+   Mobile Responsive
+========================== */
+
+@media(max-width:768px){
+
+.navbar{
+
+flex-direction:column;
+gap:20px;
+
+}
+
+.brand{
+
+flex-direction:column;
+text-align:center;
+
+}
+
+.brand h1{
+
+font-size:26px;
+
+}
+
+.logo{
+
+width:60px;
+height:60px;
+
+}
+
+.hero{
+
+padding:50px 20px;
+
+}
+
+.hero h2{
+
+font-size:30px;
+
+}
+
+.hero p{
+
+font-size:16px;
+
+}
+
+#search{
+
+font-size:15px;
+
+}
+
+.products{
+
+grid-template-columns:1fr;
+
+}
+
+.card-content h3{
+
+height:auto;
+
+}
+
+.categories{
+
+justify-content:flex-start;
+overflow-x:auto;
+padding-bottom:10px;
+
+}
+
+.categories button{
+
+flex:none;
+
+}
+
+.footer-logo{
+
+width:70px;
+height:70px;
+
+}
+
+#whatsapp{
+
+width:55px;
+height:55px;
+font-size:26px;
+
+}
+
+#topBtn{
+
+width:45px;
+height:45px;
+
+}
+
+}
